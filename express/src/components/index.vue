@@ -50,6 +50,8 @@ export default {
     // 新增用户
     addUser(){
       var that = this
+      // cors访问：http://localhost:6090/api/addUser
+      // 代理访问：/api/api/addUser
       this.$axios.post('/api/api/addUser',qs.stringify({
         username: this.username,
         password: this.password
@@ -131,7 +133,9 @@ export default {
     // 加载用户
     getUser(){
       var that = this
-      this.$axios.get('http://localhost:6090/api/getUser')
+      // cors访问：http://localhost:6090/api/getUser
+      // 代理访问：/api/api/getUser
+      this.$axios.get('/api/api/getUser')
       .then(function(res){
         console.log(res)
         if(res.data.code === 200){

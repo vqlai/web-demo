@@ -14,11 +14,11 @@ const cors = require('cors');
 const app = express();
 
 // 配置cors，解决跨域问题
-app.use(cors({
-		origin: ['http://localhost:7090'],
-		methods: ['GET','POST'],
-		allowHeaders:['Content-Type','Authorization']
-}))
+// app.use(cors({
+// 		origin: ['http://localhost:7090'],
+// 		methods: ['GET','POST'],
+// 		allowHeaders:['Content-Type','Authorization']
+// }))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
