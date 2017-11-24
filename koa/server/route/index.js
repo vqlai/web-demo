@@ -3,7 +3,8 @@ const config = require('../config'),
 			router = new Router({
 				prefix: config.app.routerBaseApi
 			}),
-			U = require('../controller/user.js');
+			U = require('../controller/user.js'),
+			checkToken = require('../middleware/checkToken.js');
 
 /*HTTP动词
 	GET     //查询 
@@ -12,9 +13,10 @@ const config = require('../config'),
 	PATCH   //更新
 	DELETE  //删除
 */
-router.get('/getAllUser', U.getAllUser);
-router.post('/addUser', U.addUser);
-router.post('/deleteUserById', U.deleteUserById);
-router.post('/modifyUser/:id', U.modifyUser);
+router.post('/login', U.login);
+router.get('/getAllUser', checkToken, U.getAllUser);
+router.post('/addUser', checkToken, U.addUser);
+router.delete('/deleteUserById/:id', checkToken, U.deleteUserById);
+router.patch('/modifyUser/:id', checkToken, U.modifyUser);
 
 module.exports = router;

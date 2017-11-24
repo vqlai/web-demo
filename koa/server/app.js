@@ -26,8 +26,13 @@ const bodyParser = require('koa-bodyparser');
 app.use(bodyParser());
 
 // 使用response中间件(放在最前面)
+// app.use可以直接执行引人文件里的module.export内容
 const response = require('./middleware/response.js')
 app.use(response);
+
+// 使用errorHandle中间件
+const errorHandle = require('./middleware/errorHandle.js')
+app.use(errorHandle);
 
 //　使用路由中间件
 app.use(router.routes())

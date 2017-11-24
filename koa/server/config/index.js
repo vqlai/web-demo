@@ -1,7 +1,7 @@
 let config = {
 	jwt: {
-		secret: 'secret',
-		exprisesIn: '3600s'
+		secret: 'secret', //撒盐：加密的时候混淆
+		expiresIn: '3600s' // token到期时间 3600s
 	},
 	mongodb: {
 		host: '127.0.0.1',
@@ -16,4 +16,5 @@ let config = {
 	}
 }
 
+// 注意区分es6导出模块的写法
 module.exports = config;
