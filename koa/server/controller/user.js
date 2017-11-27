@@ -1,6 +1,7 @@
 const User = require('../model/user.js');
 // const config = require('../config');
 const createToken = require('../util/createToken.js')
+const md5 = require('md5')
 
 // 返回数据格式
 //　{msg: '',success:boolean, data: {}}
@@ -33,7 +34,8 @@ class UserController{
 		})
 		// console.log('test:'+result)
 		if(result){
-			if(result.password === password){
+			// 判断数据库的密码与前端传来的md5加密的密码是否相匹配
+			if(result.password === md5(password)){
 				let token = createToken(result._id);
 				// console.log(token)
 				return ctx.success({
@@ -61,15 +63,15 @@ class UserController{
 	// 获取所有用户
 	static async getAllUser(ctx){
 		let result = await User
-				.find()
-				.exec() // 执行查询，并将查询结果传入回调函数,可以传人一个函数，会返回成为一个完整的 promise 对象
-				// .then((val)=>{
-				// 	console.log(val)
-				// })
-				.catch(err => {
-					console.log(err)
-					ctx.throw(500, '服务器错误－getAllUser错误!')
-				})
+			.find()
+			.exec() // 执行查询，并将查询结果传入回调函数,可以传人一个函数，会返回成为一个完整的 promise 对象
+			// .then((val) => {
+			// 	console.log(val)
+			// })
+			.catch(err => {
+				console.log(err)
+				ctx.throw(500, '服务器错误－getAllUser错误!')
+			})
 		// console.log(result) // rseult是一个对象数组
 		if(result){
 			return ctx.success({
@@ -96,9 +98,12 @@ class UserController{
 		if(!password){
 			ctx.throw(400, '密码不能为空!')
 		}
+		// 注意node环境的时间少8小时	createTime: new Date(Date.now() + (8 * 60 * 60 * 1000)).getTime()
+
 		const user = new User({
 			username,
-			password
+			password: md5(password),
+			createTime: new Date()
 		})
 		let result = await user.save().catch((err) => {
       ctx.throw(500, '服务器内部错误-addUser错误!');

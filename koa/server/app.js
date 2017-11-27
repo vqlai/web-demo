@@ -34,6 +34,9 @@ app.use(response);
 const errorHandle = require('./middleware/errorHandle.js')
 app.use(errorHandle);
 
+const initData = require('./middleware/initData.js')
+app.use(initData);
+
 //　使用路由中间件
 app.use(router.routes())
 	 .use(router.allowedMethods());

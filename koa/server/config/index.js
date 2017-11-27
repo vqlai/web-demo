@@ -1,4 +1,11 @@
 let config = {
+	initData:[{
+		username: 'root',
+		password: '123456'
+	},{
+		username: 'admin',
+		password: '111111'
+	}],
 	jwt: {
 		secret: 'secret', //撒盐：加密的时候混淆
 		expiresIn: '3600s' // token到期时间 3600s

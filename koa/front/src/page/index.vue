@@ -3,13 +3,13 @@
     <div class="exit-btn">您好，{{info}}。<a href="javascript:;" @click="exit">退出</a></div>
     <img src="../assets/logo.png">
     <form>
-      <input type="text" name="username" v-model="username">
-      <input type="text" name="password" v-model="password">
+      用户名：<input type="text" name="username" v-model="username">
+      密码：<input type="password" name="password" v-model="password">
       <a href="javascript:;" @click="_addUser">添加</a>
     </form>
     <ul>
       <li v-for="item in list">
-        <span>用户名：{{item.username}} 密码：{{item.password}}</span>&nbsp;<a href="javascript:;"  @click="_deleteUser(item)">删除</a>&nbsp;<a href="javascript:;"  @click="showModifyForm(item)">修改</a>
+        <span>用户名：{{item.username}} 密码：{{item.password}} 创建时间：{{moment(item.createTime).format('YYYY-MM-DD HH:mm:ss')}}</span>&nbsp;<a href="javascript:;"  @click="_deleteUser(item)">删除</a>&nbsp;<a href="javascript:;"  @click="showModifyForm(item)">修改</a>
       </li>
     </ul>
     <br/>

@@ -4,7 +4,7 @@
 		<div v-show="msg" v-text="msg" class="msg"></div>
 		<form action="">
 			<div>帐号：<input type="text" name="username" v-model="username"></div>
-      <div>密码：<input type="text" name="password" v-model="password"></div>
+      <div>密码：<input type="password" name="password" v-model="password"></div>
       <div><a href="javascript:;" @click="handleLogin">登录</a></div>
 		</form>
 	</div>

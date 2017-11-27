@@ -5,6 +5,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import moment from 'moment'
+Vue.prototype.moment = moment
 // import axios from 'axios' 
 // Vue.prototype.$axios = axios // axios并不是vue的插件，所以需要将其加载到原型链中，就可以直接使用了
 Vue.config.productionTip = false
