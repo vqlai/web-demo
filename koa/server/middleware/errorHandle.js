@@ -9,7 +9,7 @@ const logger = tracer.colorConsole({
 	dateformat: "HH:MM:ss.L",
 	transport: function(data){
 		console.log(data.output);
-		fs.appendFile('./error.log', data.output + '\n', {encoding: 'utf8'}, (err) => {
+		fs.appendFile('./log/error.log', data.output + '\n', {encoding: 'utf8'}, (err) => {
 			if(err){
 				throw err;
 			}

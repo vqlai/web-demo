@@ -2,7 +2,10 @@ import axios from 'axios';
 import router from '../router';
 
 axios.defaults.headers.post['Content-Type'] = 'application/json';
-// axios.defaults.baseURL = '/proxy'
+// 开发代理
+// axios.defaults.baseURL = '/api'
+// 正式环境
+// axios.defaults.baseURL = 'http://localhost:3030/'
 axios.defaults.timeout = 5 * 1000;
 
 axios.interceptors.request.use((config) => {
@@ -20,6 +23,16 @@ axios.interceptors.response.use((response) => {
 	if(error.response){
 		switch(error.response.status){
 			case 401:
+				router.replace({
+					path: '/login',
+					query: {redirect: router.currentRoute.fullPath}
+				})
+			case 404:
+				router.replace({
+					path: '/login',
+					query: {redirect: router.currentRoute.fullPath}
+				})
+			case 500:
 				router.replace({
 					path: '/login',
 					query: {redirect: router.currentRoute.fullPath}

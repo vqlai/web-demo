@@ -1,4 +1,5 @@
 // koa 
+const serve = require('koa-static');
 const koa = require('koa');
 const app = new koa();
 
@@ -21,7 +22,7 @@ db.once('open', ()=>{
 	console.log('数据库连接成功！');
 })
 
-// bodyParser中间件
+// bodyParser中间件 可以用来从请求的数据体里面提取键值对。
 const bodyParser = require('koa-bodyparser');
 app.use(bodyParser());
 
@@ -34,12 +35,18 @@ app.use(response);
 const errorHandle = require('./middleware/errorHandle.js')
 app.use(errorHandle);
 
+// 初始化db数据
 const initData = require('./middleware/initData.js')
 app.use(initData);
 
+// 配置cors跨域
+const cors = require('./middleware/cors.js')
+app.use(cors)
+
 //　使用路由中间件
-app.use(router.routes())
-	 .use(router.allowedMethods());
+app.use(router.routes()).use(router.allowedMethods());
+
+app.use(serve(__dirname + '/front'));
 
 app.listen(config.app.port, ()=>{
 	console.log('The server is running at http://localhost:' +config.app.port)

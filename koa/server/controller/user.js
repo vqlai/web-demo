@@ -5,7 +5,8 @@ const md5 = require('md5')
 
 // 返回数据格式
 //　{msg: '',success:boolean, data: {}}
-// 注意ctx.success在条件分支语句中需要加retur不然继续往下执行
+// 注意ctx.success在条件分支语句中需要加return不然继续往下执行
+// 注意ctx.response.body可以简写为ctx.body但ctx.request.body不可以简写
 
 class UserController{
 	// 登录

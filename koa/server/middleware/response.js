@@ -3,6 +3,7 @@
 module.exports = async (ctx, next) => {
 	//　请求成功时
 	ctx.success = ({data, msg, total, success}) => {
+		// 注意ctx.response.body可以简写为ctx.body但ctx.request.body不可以简写
 		ctx.body = {code: 200, data, msg, total, success};
 	};
 	// 传递到下一个中间件
