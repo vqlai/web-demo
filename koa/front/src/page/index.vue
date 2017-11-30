@@ -12,6 +12,10 @@
         <span>用户名：{{item.username}} 密码：{{item.password}} 创建时间：{{moment(item.createTime).format('YYYY-MM-DD HH:mm:ss')}}</span>&nbsp;<a href="javascript:;"  @click="_deleteUser(item)">删除</a>&nbsp;<a href="javascript:;"  @click="showModifyForm(item)">修改</a>
       </li>
     </ul>
+    <div>
+      <a href="javascript:;" @click="prePage" v-show="preBtn">上一页</a>
+      <a href="javascript:;" @click="nextPage" v-show="nextBtn">下一页</a>
+    </div>
     <br/>
     <form v-show="isModifyForm">
       <input type="text" name="modifyUsername" v-model="modifyUsername">
@@ -35,11 +39,16 @@ export default {
       isModifyForm: false,
       modifyItem: null,
       modifyUsername: '',
-      modifyPassword: ''
+      modifyPassword: '',
+      currentPage: 1,
+      pageSize: 3,
+      total: 0,
+      preBtn: false,
+      nextBtn: true
     }
   },
   mounted(){
-    this._getAllUser()    
+    this._getAllUser(this.currentPage, this.pageSize)    
   },
   methods:{
     exit(){
@@ -75,7 +84,7 @@ export default {
       .then(function(res){
         console.log(res)
         if(res.data.success === true){
-          that._getAllUser()
+          that._getAllUser(that.currentPage, that.pageSize)
           that.modifyUsername = ''
           that.modifyPassword = ''  
           that.isModifyForm = false
@@ -107,7 +116,7 @@ export default {
       .then(function(res){
         console.log(res)
         if(res.data.success === true){
-          that._getAllUser()
+          that._getAllUser(that.currentPage, that.pageSize)
           that.username = ''
           that.password = ''
         }else{
@@ -129,7 +138,7 @@ export default {
       .then(function(res){
         console.log(res)
         if(res.data.success === true){
-          that._getAllUser()
+          that._getAllUser(that.currentPage, that.pageSize)
           that.username = ''
           that.password = ''
         }
@@ -138,17 +147,38 @@ export default {
         console.log(err)
       })
     },
+    nextPage(){
+      let pages = this.total%this.pageSize ? parseInt(this.total/this.pageSize)+1 : parseInt(this.total/this.pageSize);
+      this._getAllUser(++this.currentPage, this.pageSize)
+      if(this.currentPage > 1){
+        this.preBtn = true
+      }
+      if(pages == this.currentPage){
+        this.nextBtn = false
+      }
+    },
+    prePage(){
+      let pages = this.total%this.pageSize ? parseInt(this.total/this.pageSize)+1 : parseInt(this.total/this.pageSize);
+      this._getAllUser(--this.currentPage, this.pageSize)
+      if(this.currentPage == 1){
+        this.preBtn = false
+      }
+      if(this.currentPage < pages){
+        this.nextBtn = true
+      }
+    },
     // 加载用户
-    _getAllUser(){
+    _getAllUser(currentPage, pageSize){
       var that = this
       // cors访问：http://localhost:6090/api/getUser
       // 代理访问：/api/api/getUser
       // this.$axios.get('/api/api/getAllUser')
-      getAllUser()
+      getAllUser(currentPage, pageSize)
       .then(function(res){
         console.log(res)
         if(res.data.success === true){
           that.list = res.data.data
+          that.total = res.data.total
         }
       })
       .catch(function(err){

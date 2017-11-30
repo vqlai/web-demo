@@ -12,9 +12,13 @@ export function login(data) {
 }
 
 // 获取所有用户
-export function getAllUser() {
-	const url = '/api/getAllUser';
-	return axios.get(url).then(res => {
+export function getAllUser(currentPage,pageSize) {
+	// const url = `/api/getAllUser?currentPage=${currentPage}&pageSize=${pageSize}`;
+	const url = `/api/getAllUser`;
+	return axios.get(url,{params:{
+		currentPage: currentPage,
+		pageSize: pageSize
+	}}).then(res => {
 		return Promise.resolve(res)
 	})
 }

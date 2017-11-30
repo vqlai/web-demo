@@ -1,0 +1,196 @@
+[31m[1m15:16:40.62 <error> UnauthorizedError: no token detected in http header Authorization
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:32:12)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m15:46:37.89 <error> ReferenceError: page is not defined
+    at getAllUser (F:\vue\myself-project\koa\server\controller\user.js:68:3)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:34:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8) (in errorHandle.js:27)[22m[39m
+[31m[1m15:46:39.58 <error> ReferenceError: page is not defined
+    at getAllUser (F:\vue\myself-project\koa\server\controller\user.js:68:3)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:34:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8) (in errorHandle.js:27)[22m[39m
+[31m[1m15:46:40.95 <error> ReferenceError: page is not defined
+    at getAllUser (F:\vue\myself-project\koa\server\controller\user.js:68:3)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:34:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8) (in errorHandle.js:27)[22m[39m
+[31m[1m15:46:52.04 <error> ReferenceError: page is not defined
+    at getAllUser (F:\vue\myself-project\koa\server\controller\user.js:68:3)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:34:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8) (in errorHandle.js:27)[22m[39m
+[31m[1m16:27:03.18 <error> TypeError: ctx.throe is not a function
+    at User.find.sort.skip.limit.exec.catch.err (F:\vue\myself-project\koa\server\controller\user.js:81:10)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:27:44.78 <error> InternalServerError: 服务器错误-分页查找错误!
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at User.find.sort.skip.limit.exec.catch.err (F:\vue\myself-project\koa\server\controller\user.js:81:15)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:47:01.20 <error> UnauthorizedError: no token detected in http header Authorization
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:33:12)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:56:06.23 <error> UnauthorizedError: expired token
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:29:13)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:56:57.35 <error> UnauthorizedError: expired token
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:29:13)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:57:40.80 <error> UnauthorizedError: expired token
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:29:13)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:57:42.14 <error> UnauthorizedError: expired token
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:29:13)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m
+[31m[1m16:58:03.71 <error> UnauthorizedError: expired token
+    at Object.throw (F:\vue\myself-project\koa\server\node_modules\_koa@2.4.1@koa\lib\context.js:92:11)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\checkToken.js:29:13)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:345:16
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at F:\vue\myself-project\koa\server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-router@7.3.0@koa-router\lib\router.js:350:31)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\cors.js:43:8)
+    at dispatch (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:42:32)
+    at next (F:\vue\myself-project\koa\server\node_modules\_koa-compose@4.0.0@koa-compose\index.js:43:18)
+    at module.exports (F:\vue\myself-project\koa\server\middleware\initData.js:27:8)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) (in errorHandle.js:27)[22m[39m

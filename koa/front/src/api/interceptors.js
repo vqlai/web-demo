@@ -2,10 +2,10 @@ import axios from 'axios';
 import router from '../router';
 
 axios.defaults.headers.post['Content-Type'] = 'application/json';
-// 开发代理
+// 开发代理访问
 // axios.defaults.baseURL = '/api'
-// 正式环境
-// axios.defaults.baseURL = 'http://localhost:3030/'
+// 正式环境cors访问
+axios.defaults.baseURL = 'http://localhost:3030/'
 axios.defaults.timeout = 5 * 1000;
 
 axios.interceptors.request.use((config) => {

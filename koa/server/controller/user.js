@@ -7,7 +7,7 @@ const md5 = require('md5')
 //　{msg: '',success:boolean, data: {}}
 // 注意ctx.success在条件分支语句中需要加return不然继续往下执行
 // 注意ctx.response.body可以简写为ctx.body但ctx.request.body不可以简写
-
+// ctx.query获取GET请求url参数，ctx.params获取POST请求url参数,ctx.request.body获取请求体参数
 class UserController{
 	// 登录
 	static async login(ctx){
@@ -63,22 +63,49 @@ class UserController{
 	}
 	// 获取所有用户
 	static async getAllUser(ctx){
-		let result = await User
-			.find()
-			.exec() // 执行查询，并将查询结果传入回调函数,可以传人一个函数，会返回成为一个完整的 promise 对象
-			// .then((val) => {
-			// 	console.log(val)
-			// })
-			.catch(err => {
-				console.log(err)
-				ctx.throw(500, '服务器错误－getAllUser错误!')
-			})
-		// console.log(result) // rseult是一个对象数组
+		// currentPage&&pageSize 不能为字符串只能为整形
+		let currentPage  = ctx.query.currentPage ; // 当前页
+		let pageSize  = ctx.query.pageSize  || 10; // 每页显示数，默认10条
+		console.log(ctx.query)
+		if(currentPage <= 0){
+			currentPage = 1;
+		}
+		let result, total;
+		if(currentPage  && pageSize ){
+			result = await User
+				.find()
+				.sort({ 'createTime': -1 }) // 排序，-1为倒序
+				.skip(parseInt(pageSize * (currentPage  -1))) // 跳过数
+				.limit(parseInt(pageSize)) // 限制每页显示数
+				.exec()
+				.catch(err => {
+					ctx.throw(500, '服务器错误-分页查找错误!')
+				})
+			total = await User
+			  .count()
+			  .exec()
+			  .catch(err => {
+			  	ctx.throw(500,'服务器内部错误-分页总数查询错误!')
+			  })
+		}else{
+			result = await User
+				.find()
+				.exec() // 执行查询，并将查询结果传入回调函数,可以传人一个函数，会返回成为一个完整的 promise 对象
+				// .then((val) => {
+				// 	console.log(val)
+				// })
+				.catch(err => {
+					console.log(err)
+					ctx.throw(500, '服务器错误－getAllUser错误!')
+				})
+			// console.log(result) // rseult是一个对象数组
+		}
 		if(result){
 			return ctx.success({
 				msg: '获取成功',
 				data: result,
-				success: true
+				success: true,
+				total
 			})
 		}else{
 			return ctx.success({

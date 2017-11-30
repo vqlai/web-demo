@@ -2,6 +2,7 @@ const config = require('../config');
 const jwt = require('jsonwebtoken');
 
 module.exports = async (ctx, next) => {
+	// 获取请求头内容
 	console.log(ctx.request.header.authorization)
 	// const authorization = ctx.get('Authorization');
 	const authorization = ctx.request.header.authorization;
