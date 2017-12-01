@@ -39,9 +39,9 @@ app.use(errorHandle);
 const initData = require('./middleware/initData.js')
 app.use(initData);
 
-// 配置cors跨域
-const cors = require('./middleware/cors.js')
-app.use(cors)
+// 配置cors跨域(注意配置了cors返回不了错误状态码，前端没有状态码无法路由跳转)
+// const cors = require('./middleware/cors.js')
+// app.use(cors)
 
 //　使用路由中间件
 app.use(router.routes()).use(router.allowedMethods());

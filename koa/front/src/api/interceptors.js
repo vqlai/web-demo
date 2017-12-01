@@ -3,9 +3,9 @@ import router from '../router';
 
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 // 开发代理访问
-// axios.defaults.baseURL = '/api'
-// 正式环境cors访问
-axios.defaults.baseURL = 'http://localhost:3030/'
+axios.defaults.baseURL = '/api'
+// 正式环境cors访问(因为正式环境前后端代码同域可无需配置cors)
+// axios.defaults.baseURL = 'http://localhost:3030/'
 axios.defaults.timeout = 5 * 1000;
 
 axios.interceptors.request.use((config) => {
@@ -20,7 +20,9 @@ axios.interceptors.request.use((config) => {
 axios.interceptors.response.use((response) => {
 	return response;
 }, (error) => {
+	console.log(error.response)
 	if(error.response){
+		console.log(error.response.status)
 		switch(error.response.status){
 			case 401:
 				router.replace({
