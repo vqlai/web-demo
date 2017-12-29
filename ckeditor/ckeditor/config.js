@@ -17,6 +17,11 @@ CKEDITOR.editorConfig = function( config ) {
 	// 取消 “拖拽以改变尺寸”功能 plugins/resize/plugin.js
 	config.resize_enabled = false;
 	// 移除图片弹窗与链接弹窗多余的tab
+
+	// 图片上传相关
+	config.filebrowserImageUploadUrl = '/upload'; // 图片上传路径
+	config.image_previewText = ' '; // 图片信息面板预览区内容的文字内容，默认显示CKEditor自带的内容
+	
 	config.removeDialogTabs = 'link:advanced;link:target;image:advanced;image:Link;'; 
 	config.toolbar = [
 		{ name: 'clipboard', items: [ '-', 'Undo', 'Redo' ] },
