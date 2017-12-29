@@ -10,6 +10,17 @@
   <!--用法：1,引入ckeditor.js   2,使用CKEDITOR.replace('editor')进行初始化-->
   <script src="./ckeditor/ckeditor.js"></script>
   <script>
-	CKEDITOR.replace('editor')
+	  CKEDITOR.replace('editor')
+    // $.post("/api/loadContent", {type: 1}, function(data){
+    //     // ckeditor.setData(data.datas.content);
+    //     if(data.code == 0){
+    //       // 防止快速重复点击时加载内容
+    //         setTimeout(function(){
+    //             CKEDITOR.instances.editor.setData(data.datas.content);
+    //         },20)
+    //     }else{
+    //         layer.msg("加载失败，请重新加载！");
+    //     }
+    // })
   </script>
 </html>
