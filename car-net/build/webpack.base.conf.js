@@ -15,6 +15,11 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  // 通过外部引人的js文件，需要在externals里配置需要用到的实例化名
+  externals: {
+    "BMap": "BMap",
+    "BMapLib": "BMapLib"
+  }, 
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
