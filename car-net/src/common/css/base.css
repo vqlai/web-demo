@@ -1,0 +1,4 @@
+/* 修改element菜单样式 */
+.nav-menu .el-submenu__title{
+	height: 59px!important;
+}

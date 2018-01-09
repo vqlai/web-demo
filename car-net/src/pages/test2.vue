@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="test2">
     <div id="allmap"></div>
     <div>
       <button @click="handleRun()">开始</button> 
@@ -12,7 +12,7 @@
 <script>
 import {getTrack} from '@/api/index'
 export default {
-  name: 'index',
+  name: 'test2',
   data () {
     return {
       bdmap: null,

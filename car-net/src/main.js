@@ -2,9 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import {router} from './router/index'
+import '@/common/css/index.css'
+
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
 require('@/common/libs/LuShu_min.js')
 // require('@/common/libs/LuShu.js')
+
+Vue.use(ElementUI, { size: 'small' })
 
 Vue.config.productionTip = false
 
