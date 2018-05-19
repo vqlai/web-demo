@@ -1,0 +1,9 @@
+.test{
+  text-align: center;
+}
+.img-box{
+  height: 3rem;
+  width: 3rem;
+  background: url(../../common/imgs/logo.png) no-repeat;
+  background-size: 100% 100%;
+}

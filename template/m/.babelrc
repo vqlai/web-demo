@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": [
+    "transform-vue-jsx", 
+    "transform-runtime",
+    ["component", [ // 通过该配置即把mint-ui和其css引入到项目中了
+      {
+        "libraryName": "mint-ui",
+        "style": true
+      }
+    ]]
+  ]
+}
