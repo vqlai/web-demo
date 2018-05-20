@@ -9,7 +9,7 @@ const test = () => import("@/pages/test/test.vue")
 const test2 = () => import("@/pages/test2/test2")
 
 const router = new Router({
-  // mode: 'history', // 后端支持可开
+  mode: 'history', // 后端支持可开
   // scrollBehavior: () => ({ y: 0 }),
   routes: [
     {path: '/', redirect: '/test'},

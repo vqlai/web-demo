@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { Toast } from 'mint-ui'
+// import { Toast } from 'mint-ui'
 export default {
   name: 'test2',
   data () {
@@ -17,7 +17,8 @@ export default {
   },
   methods: {
     showMsg() {
-      Toast({ message: '测试', position: 'bottom', duration: 2000 });
+      // Toast({ message: '测试', position: 'bottom', duration: 2000 });
+      this.$toast('测试')
     }
   },
 }

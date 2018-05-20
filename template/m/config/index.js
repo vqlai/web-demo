@@ -11,13 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {  // 开发环境http跨域代理配置
-      // '/v1':{
-      //   target: 'https://www.xxx.com',
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //       '^/v1': ''
-      //   }
-      // }
+      '/api':{
+        target: 'https://api.dongqiudi.com',
+        changeOrigin: true,
+        pathRewrite: {
+            '^/api': ''
+        }
+      }
     },
 
     // Various Dev Server settings
