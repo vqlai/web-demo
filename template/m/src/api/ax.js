@@ -3,8 +3,8 @@ import {router} from '../router/index.js'
 
 // 创建axios实例
 const ax = axios.create({
-  baseURL: process.env.BASE_API, // api的base_url,后面加上'/api'因为后台有设置基础路径
-  // baseURL: '/api', // 使用代理,注意后台有没有基础路径
+  // baseURL: process.env.BASE_API, // api的base_url,后面加上'/api'因为后台有设置基础路径
+  baseURL: '/api', // 使用代理,注意后台有没有基础路径
 	timeout: 10000 // 请求超时时间
 })
 
